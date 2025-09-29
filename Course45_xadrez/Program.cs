@@ -7,9 +7,9 @@ namespace Course45_xadrez
     {
         static void Main(string[] args)
         {
-            Posicao pos = new Posicao(1, 1);
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
-            Console.WriteLine(pos);
+            //Console.WriteLine(pos);
         }
     }
 }
