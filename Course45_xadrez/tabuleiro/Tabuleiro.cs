@@ -6,25 +6,25 @@ namespace tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        private Peca[,] Pecas;
+        private Peca[,] pecas;
 
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
-            Pecas = new Peca[linhas, colunas];
+            pecas = new Peca[linhas, colunas];
         }
 
 
         public Peca Peca(int linha, int coluna) //como a propriedade é private, precisa do método p/ acessar de outra classe
         {
-            return Pecas[linha, coluna];
+            return pecas[linha, coluna];
         }
 
         public Peca Peca(Posicao pos)
         {
-            return Pecas[pos.Linha, pos.Coluna];
+            return pecas[pos.Linha, pos.Coluna];
         }
 
 
@@ -39,7 +39,7 @@ namespace tabuleiro
             if (ExistePeca(pos)) {
                 throw new TabuleiroException("Já existe uma peça nesta posição! " + pos);
             }
-            Pecas[pos.Linha, pos.Coluna] = p;
+            pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
 
@@ -50,7 +50,7 @@ namespace tabuleiro
             }
             Peca aux = Peca(pos); //guardo a posição
             aux.Posicao = null; //removo a peça
-            Pecas[pos.Linha, pos.Coluna] = null; //posição no tabuleiro
+            pecas[pos.Linha, pos.Coluna] = null; //posição no tabuleiro
             return aux;
         }
 
