@@ -12,15 +12,12 @@ namespace Course45_xadrez
 
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.encerrada) {
+                while (!partida.Encerrada) {
 
                     try {
 
                         Console.Clear();
-                        Tela.ImprimirTabuleiro(partida.Tab);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: {0}", partida.Turno);
-                        Console.WriteLine("Aguardando jogada: {0}", partida.JogadorAtual);
+                        Tela.ImprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
