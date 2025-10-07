@@ -15,6 +15,9 @@ namespace Course45_xadrez
             Console.WriteLine();
             Console.WriteLine("Turno: {0}", partida.Turno);
             Console.WriteLine("Aguardando jogada: {0}", partida.JogadorAtual);
+            if (partida.Xeque) {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
@@ -34,7 +37,7 @@ namespace Course45_xadrez
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
             Console.Write("[");
-            foreach(Peca x in conjunto) {
+            foreach (Peca x in conjunto) {
                 Console.Write(x + " ");
             }
             Console.Write("]");
@@ -49,7 +52,7 @@ namespace Course45_xadrez
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  A B C D E F G H");
+            Console.WriteLine("  a b c d e f g h");
         }
 
         public static void ImprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
@@ -71,7 +74,7 @@ namespace Course45_xadrez
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  A B C D E F G H");
+            Console.WriteLine("  a b c d e f g h");
             Console.BackgroundColor = fundoOriginal;
         }
 
