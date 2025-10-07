@@ -41,27 +41,9 @@ namespace Course45_xadrez
                         Console.ReadLine();
                     }
 
+                    Console.Clear();
+                    Tela.ImprimirPartida(partida);
                 }
-
-
-
-
-                /*
-                PosicaoXadrez pos = new PosicaoXadrez('c', 7);
-                Console.WriteLine(pos);
-                Console.WriteLine(pos.ToPosicao());
-                 */
-
-                /*
-                Tabuleiro tab = new Tabuleiro(8, 8);
-
-                tab.ColocarPeca(new Torre(tab, Cor.Preto), new Posicao(0, 0));
-
-
-                Tela.ImprimirTabuleiro(tab);
-
-                */
-                //Console.WriteLine(pos);
             }
             catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);

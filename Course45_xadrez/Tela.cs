@@ -14,9 +14,15 @@ namespace Course45_xadrez
             ImprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: {0}", partida.Turno);
-            Console.WriteLine("Aguardando jogada: {0}", partida.JogadorAtual);
-            if (partida.Xeque) {
-                Console.WriteLine("XEQUE!");
+            if (!partida.Encerrada) {
+                Console.WriteLine("Aguardando jogada: {0}", partida.JogadorAtual);
+                if (partida.Xeque) {
+                    Console.WriteLine("XEQUE!");
+                }
+            }
+            else {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine("Vencedor: {0}", partida.JogadorAtual);
             }
         }
 
